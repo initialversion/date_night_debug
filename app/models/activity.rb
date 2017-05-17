@@ -1,6 +1,9 @@
 class Activity < ApplicationRecord
   # Direct associations
 
+  has_many   :date_nights,
+             :dependent => :nullify
+
   belongs_to :contributor,
              :class_name => "User"
 
