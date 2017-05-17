@@ -20,12 +20,42 @@
 
       <% @date_nights.each do |date_night| %>
       <tr>
-        <td><%= date_night.user.username %></td>
-        <td><%= date_night.date.username %></td>
+        <td>
+          <% if date_night.user.present? %>
+            <a href="/users/<%= date_night.user.id %>">
+              <%= date_night.user.username %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if date_night.date.present? %>
+            <a href="/users/<%= date_night.date.id %>">
+              <%= date_night.date.username %>
+            </a>
+          <% end %>
+        </td>
         <td><%= date_night.day %></td>
-        <td><%= date_night.meal.name %></td>
-        <td><%= date_night.restaurant.name %></td>
-        <td><%= date_night.activity.name %></td>
+        <td>
+          <% if date_night.meal.present? %>
+            <a href="/recipes/<%= date_night.meal.id %>">
+              <%= date_night.meal.name %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if date_night.restaurant.present? %>
+            <a href="/restaurants/<%= date_night.restaurant.id %>">
+              <%= date_night.restaurant.name %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if date_night.activity.present? %>
+            <a href="/activities/<%= date_night.activity.id %>">
+              <%= date_night.activity.name %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/date_nights/<%= date_night.id %>" class="btn btn-primary">Show</a>
           

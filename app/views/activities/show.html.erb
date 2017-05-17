@@ -25,7 +25,13 @@
       <dd><%= @activity.yelp_link %></dd>
 
       <dt>Contributor</dt>
-      <dd><%= @activity.contributor_id %></dd>
+      <dd>
+        <% if @activity.contributor.present? %>
+          <a href="/users/<%= @activity.contributor_id %>">
+            <%= @activity.contributor.username %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

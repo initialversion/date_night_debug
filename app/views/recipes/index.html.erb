@@ -25,7 +25,13 @@
         <td><%= recipe.ingredients %></td>
         <td><%= recipe.recipe %></td>
         <td><img src='<%= recipe.picture %>' class='img-responsive'></td>
-        <td><%= recipe.creator.username %></td>
+        <td>
+          <% if recipe.creator.present? %>
+            <a href="/users/<%= recipe.creator.id %>">
+              <%= recipe.creator.username %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/recipes/<%= recipe.id %>" class="btn btn-primary">Show</a>
           

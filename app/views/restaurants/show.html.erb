@@ -25,7 +25,13 @@
       <dd><%= @restaurant.yelp_link %></dd>
 
       <dt>Contributor</dt>
-      <dd><%= @restaurant.contributor_id %></dd>
+      <dd>
+        <% if @restaurant.contributor.present? %>
+          <a href="/users/<%= @restaurant.contributor_id %>">
+            <%= @restaurant.contributor.username %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 

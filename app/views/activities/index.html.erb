@@ -34,7 +34,13 @@
         <td><%= activity.description %></td>
         <td><%= activity.website %></td>
         <td><%= activity.yelp_link %></td>
-        <td><%= activity.contributor.username %></td>
+        <td>
+          <% if activity.contributor.present? %>
+            <a href="/users/<%= activity.contributor.id %>">
+              <%= activity.contributor.username %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/activities/<%= activity.id %>" class="btn btn-primary">Show</a>
           
