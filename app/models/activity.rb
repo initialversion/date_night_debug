@@ -5,4 +5,6 @@ class Activity < ApplicationRecord
 
   # Validations
 
+  validates :name, :length => { :minimum => 3, :maximum => 50 }
+
 end
