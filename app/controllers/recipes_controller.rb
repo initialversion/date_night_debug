@@ -16,6 +16,7 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @date_night = DateNight.new
     @recipe = Recipe.find(params[:id])
 
     render("recipes/show.html.erb")
