@@ -1,4 +1,6 @@
 class Recipe < ApplicationRecord
+  mount_uploader :picture, PictureUploader
+
   # Direct associations
 
   has_many   :date_nights,
