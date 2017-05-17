@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :date_plans,
+             :class_name => "DateNight",
+             :dependent => :destroy
+
   # Indirect associations
 
   # Validations
