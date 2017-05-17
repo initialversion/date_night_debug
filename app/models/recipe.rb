@@ -5,4 +5,6 @@ class Recipe < ApplicationRecord
 
   # Validations
 
+  validates :recipe, :presence => true
+
 end
