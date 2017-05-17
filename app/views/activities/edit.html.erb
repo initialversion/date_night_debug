@@ -63,14 +63,8 @@
         <textarea id="yelp_link" name="yelp_link" placeholder="Yelp link" class="form-control" rows="3"><%= @activity.yelp_link %></textarea>
       </div>
 
-      <!-- Label and input for contributor_id -->
-      <div class="form-group">
-        <label for="contributor_id" class="control-label">
-          Contributor
-        </label>
-
-        <%= select_tag(:contributor_id, options_from_collection_for_select(User.all, :id, :username, @activity.contributor_id), :class => "form-control") %>
-      </div>
+      
+      
 
       <button class="btn btn-warning">
         Update Activity
