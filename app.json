@@ -1,0 +1,1 @@
+{"name":"Date Night  debug","repository":"https://github.com/initialversion/date_night_debug","env":{"CLOUDINARY_CLOUD_NAME":{"required":true},"CLOUDINARY_API_KEY":{"required":true},"CLOUDINARY_API_SECRET":{"required":true},"ROLLBAR_ACCESS_TOKEN":{"required":true}}}
