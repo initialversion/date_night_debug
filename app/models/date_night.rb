@@ -5,4 +5,6 @@ class DateNight < ApplicationRecord
 
   # Validations
 
+  validates :day, :presence => true
+
 end
