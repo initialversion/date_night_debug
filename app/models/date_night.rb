@@ -1,6 +1,10 @@
 class DateNight < ApplicationRecord
   # Direct associations
 
+  belongs_to :meal,
+             :class_name => "Recipe",
+             :counter_cache => true
+
   belongs_to :date,
              :class_name => "User"
 
