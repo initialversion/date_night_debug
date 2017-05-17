@@ -5,4 +5,6 @@ class Restaurant < ApplicationRecord
 
   # Validations
 
+  validates :name, :length => { :minimum => 3, :maximum => 20 }
+
 end
