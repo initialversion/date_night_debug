@@ -25,7 +25,7 @@
         <td><%= recipe.ingredients %></td>
         <td><%= recipe.recipe %></td>
         <td><%= recipe.picture %></td>
-        <td><%= recipe.contributor_id %></td>
+        <td><%= recipe.creator.username %></td>
         <td>
           <a href="/recipes/<%= recipe.id %>" class="btn btn-primary">Show</a>
           <a href="/recipes/<%= recipe.id %>/edit" class="btn btn-warning">Edit</a>
