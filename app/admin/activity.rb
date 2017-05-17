@@ -1,5 +1,7 @@
 ActiveAdmin.register Activity do
 
+ permit_params :location, :name, :description, :website, :yelp_link, :contributor_id
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
