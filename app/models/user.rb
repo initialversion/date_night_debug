@@ -24,6 +24,14 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :date_inviters,
+             :through => :date_invites,
+             :source => :user
+
+  has_many   :date_partners,
+             :through => :date_plans,
+             :source => :date
+
   # Validations
 
   # Include default devise modules. Others available are:
