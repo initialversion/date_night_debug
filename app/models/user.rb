@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :activities,
+             :foreign_key => "contributor_id",
+             :dependent => :nullify
+
   has_many   :recipes,
              :foreign_key => "contributor_id",
              :dependent => :nullify
