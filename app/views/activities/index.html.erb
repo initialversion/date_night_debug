@@ -25,7 +25,7 @@
         <td><%= activity.description %></td>
         <td><%= activity.website %></td>
         <td><%= activity.yelp_link %></td>
-        <td><%= activity.contributor_id %></td>
+        <td><%= activity.contributor.username %></td>
         <td>
           <a href="/activities/<%= activity.id %>" class="btn btn-primary">Show</a>
           <a href="/activities/<%= activity.id %>/edit" class="btn btn-warning">Edit</a>
